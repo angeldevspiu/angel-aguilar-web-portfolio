@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="img/favicon_img.png">
+    
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ángel Aguilar</title>
+  </head>
+
+  <body>
+    <nav class="navegacion">
+      <ul class="links-navega">
+        <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+        <li><a href="#sobre-mi" data-i18n="nav_sobre">Sobre mi</a></li>
+        <li><a href="#curriculum" data-i18n="nav_cv">Curriculum</a></li>
+
+        <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+      </ul>
+
+      <div class="lang-padre">
+        <div class="lang-switch">
+          <button id="btn-es" aria-label="Español">ᴇs</button>
+          <button id="btn-en" aria-label="English">ᴇɴ</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="fondo"></div>
+    <section id="inicio" class="inicio">
+      <div class="contenedor-presentacion oculto">
+        <div class="presentacion">
+          <h1 class="saludo" data-i18n="saludo">¡Hola!</h1>
+          
+          <span class="tag-frontend">&lt;Front-End/&gt;</span>
+
+          <h2 class="soy" data-i18n="soy">Soy</h2>
+          <h3 class="minombre" data-i18n="nombre">
+            Ángel Aguilar
+            <span class="tag-backend">&lt;Developer/&gt;</span>
+          </h3>
+        </div>
+
+        <div class="foto1">
+          <img src="img/programador2.jpg" alt="foto perfil" />
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="seccion oculto">
+      <div class="foto-yo oculto">
+        <img src="img/foto_yo2.jpg" alt="foto perfil 2" />
+      </div>
+      <h2 class="aboutme oculto" data-i18n="sobre_mi">Sobre mi</h2>
+
+      <div class="universidad oculto" data-i18n="universidad">
+        Licenciado en Ciencias de la Computación, egresado de la Benemérita
+        Universidad Autónoma de Puebla
+      </div>
+
+      <p class="oculto" data-i18n="descripcion_yo">
+        Soy Ángel Aguilar, alguien curioso, comprometido y colaborador, 
+        con gran capacidad de adaptación y aprendizaje autodidacta. 
+        Me motiva explorar más allá de lo posible, el trabajo en equipo, enfrentar retos tecnológicos 
+        y nunca dejar de aprender para compartir el conocimiento.
+      </p>
+    </section>
+    <section id="curriculum" class="seccion2 oculto">
+      <h2 class="titulo-curriculum" data-i18n="resume">CURRICULUM</h2>
+      <div class="contenedor-cvs">
+        <div class="fila-cv">
+          <div class="detalles_curriculum" data-i18n="detalles">DETALLES</div>
+
+          <div class="detalle-item">
+            <span class="detalle-label" data-i18n="full_name">Nombre:</span>
+            <span class="detalle-valor">Ángel Aguilar</span>
+          </div>
+
+          <div class="detalle-item">
+            <span class="detalle-label" data-i18n="age">Edad:</span>
+            <span class="detalle-valor" data-i18n="age_num">37 años</span>
+          </div>
+
+          <div class="detalle-item">
+            <span class="detalle-label" data-i18n="ubication">Ubicación:</span>
+            <span class="detalle-valor" data-i18n="ubication_1"
+              >Puebla, México</span
+            >
+          </div>
+
+          <div class="detalle-item">
+            <span class="detalle-label" data-i18n="university_"
+              >Universidad:</span
+            >
+            <span class="detalle-valor"
+              >Benemérita Universidad Autónoma de Puebla</span
+            >
+          </div>
+
+          <div class="detalle-item">
+            <span class="detalle-label" data-i18n="education"
+              >Escolaridad:</span
+            >
+            <span class="detalle-valor" data-i18n="degree"
+              >Licenciatura en Ciencias de la Computación</span
+            >
+          </div>
+          <div class="tecnologias" data-i18n="_technology">TECNOLOGÍAS</div>
+          <h3 class="front-endword">Front-End</h3>
+
+          <div class="tecnologias_grid">
+            <div class="tec_item">
+              <span class="tec_label">HTML</span>
+              <img src="img/html1.png" alt="HTML5" class="tec_icon" />
+            </div>
+            <div class="tec_item">
+              <span class="tec_label">CSS</span>
+              <img src="img/css1.png" alt="CSS" class="tec_icon" />
+            </div>
+
+            <div class="tec_item">
+              <span class="tec_label">JavaScript</span>
+              <img src="img/js1.png" alt="JS" class="tec_icon" />
+            </div>
+          </div>
+
+          <h3 class="tools_word" data-i18n="tools">Herramientas</h3>
+
+          <div class="tecnologias2">
+            <div class="tecnologias_grid2">
+              <img
+                src="img/visual_studio_img.png"
+                alt="VISUAL_STUDIO"
+                class="tec_icon2"
+              />
+            </div>
+            <div class="tecnologias_grid2">
+              
+              <img src="img/ngrok_img.png" alt="NGROK" class="tec_icon2" />
+            </div>
+            <div class="tecnologias_grid2">
+              
+              <img src="img/forms_pree.png" alt="FORMSPREE" class="tec_icon2" />
+            </div>
+
+            <div class="tecnologias_grid2">
+              <img src="img/git_img.png" alt="GIT" class="tec_icon2" />
+            </div>
+          </div>
+        </div>
+
+        <div class="fila-cv2">
+          <div class="educa" data-i18n="work_exp">EXPERIENCIA LABORAL</div>
+          <div class="experiencia1">
+            <h3 class="puesto" data-i18n="position">
+              Ex-líder Operativo y Técnico - Centro de Servicios Digitales
+            </h3>
+            <div class="anio-exp">2015 - 2025</div>
+            <p class="descripcion-exp1" data-i18n="description_work">
+              Gestión integral de un centro de servicios digitales de alta
+              demanda, garantizando operaciones continuas bajo alto volumen de
+              usuarios.
+            </p>
+            <p class="descripcion-exp1" data-i18n="description_work2">
+              Mantenimiento preventivo y correctivo de equipos, administración
+              de red local y WiFi, instalación de software y soporte técnico
+              directo.
+            </p>
+            <p class="descripcion-exp1" data-i18n="description_work3">
+              También realicé atención al cliente en servicios digitales,
+              trámites en línea, compras, inventarios, control administrativo,
+              manejo de ingresos/egresos y capacitación de personal.
+            </p>
+            <p class="descripcion-exp1" data-i18n="description_work4">
+              Atención a clientes nacionales y extranjeros, brindando soporte
+              utilizando inglés funcional en situaciones prácticas.
+            </p>
+          </div>
+          <div class="proyectos-word" data-i18n="title_project">PROYECTOS</div>
+
+          <div class="experiencia_proy">
+            <h3 class="titulo-proy" data-i18n="portfolio_title">
+              Portafolio Web Personal – Front-End Developer
+            </h3>
+            <div class="subtitulo-web" data-i18n="subtitulo_proy">
+              Proyecto personal enfocado en el desarrollo Front-End y buenas
+              prácticas de diseño web.
+            </div>
+            <p class="descripcion_proy" data-i18n="description_proy1">
+              Implementé animaciones y efectos visuales mediante CSS y
+              JavaScript.
+            </p>
+            <p class="descripcion_proy" data-i18n="description_proy2">
+              Implementé un sistema de internacionalización (ES / EN) usando
+              JavaScript y localStorage.
+            </p>
+            <p class="descripcion_proy" data-i18n="description_proy3">
+              Desarrollé una página web completamente responsive utilizando
+              HTML5 y CSS3.
+            </p>
+            <p class="descripcion_proy" data-i18n="description_proy4">
+              Manipulé el DOM y manejé eventos con JavaScript.
+            </p>
+            <p class="descripcion_proy" data-i18n="description_proy5">
+              Integré un formulario de contacto funcional mediante Formspree.
+            </p>
+            <p class="descripcion_proy" data-i18n="description_proy6">
+              Realicé pruebas de visualización y responsive en dispositivos
+              reales utilizando Ngrok.
+            </p>
+            
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contacto" class="seccion3 oculto">
+      <h2 class="titulo_contacto" data-i18n="contacto">CONTACTO</h2>
+
+      <form
+        action="https://formspree.io/f/mblnerdo"
+        method="POST"
+        class="form-contacto"
+      >
+        <div class="campo">
+          <span class="material-icons icono">person</span>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Nombre*"
+            data-i18n-placeholder="form_name"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <span class="material-icons icono">mail</span>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email*"
+            data-i18n-placeholder="form_email"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <span class="material-icons icono">topic</span>
+          <input
+            type="text"
+            id="asunto"
+            name="asunto"
+            placeholder="Asunto"
+            data-i18n-placeholder="form_asunto"
+          />
+        </div>
+
+        <div class="campo">
+          <span class="material-icons icono" style="top: 10px"></span>
+          <textarea
+            type="text"
+            id="mensaje"
+            name="mensaje"
+            placeholder="Mensaje*"
+            data-i18n-placeholder="form_mensaje"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" data-i18n="envia_mensaje">Enviar mensaje</button>
+      </form>
+
+      <script>
+        const form = document.querySelector(".form-contacto");
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            window.location.href = "gracias.html";
+          } else {
+            alert("Hubo un error al enviar el mensaje.");
+          }
+        });
+      </script>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-contenido">
+        <p class="footer-nombre">Ángel Aguilar / Front-End</p>
+
+        <div class="footer-redes">
+          <a href="https://github.com/angeldevspiu" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/ang-aguilar/" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+
+          <a href="#contacto" aria-label="Contacto">
+            <span class="material-icons">mail</span>
+          </a>
+        </div>
+
+        <p class="footer-copy">© 2026 Ángel Aguilar</p>
+        <p class="footer-copy2" data-i18n="rights_reserved"> ·Todos los derechos reservados·</p>
+      </div>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            } else {
+              
+              if (
+                entry.boundingClientRect.top > window.innerHeight ||
+                entry.boundingClientRect.bottom < 0
+              ) {
+                entry.target.classList.remove("visible");
+              }
+            }
+          });
+        },
+        {
+          threshold: 0.25,
+        }
+      );
+
+      document
+        .querySelectorAll(".oculto")
+        .forEach((el) => observer.observe(el));
+    </script>
+
+    <script src="js/i18n.js"></script>
+  </body>
+</html>

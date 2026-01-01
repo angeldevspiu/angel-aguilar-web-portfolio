@@ -1,0 +1,1007 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#inicio {
+  min-height: 100vh;
+  scroll-margin-top: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.oculto {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fondo {
+  position: absolute;
+  inset: 0;
+  background-image: url("img/background0.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.515);
+  backdrop-filter: blur(2px);
+}
+
+.navegacion {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background: rgb(25, 73, 109);
+
+  z-index: 2000;
+  border-radius: 4px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+}
+
+.navegacion a {
+  display: flex;
+  align-items: center;
+
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.navegacion a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: #9fd4ff;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.navegacion a:hover::after {
+  transform: scaleX(1);
+}
+
+.links-navega {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.presentacion {
+  padding: 2rem;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.presentacion h1 {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 7rem;
+  line-height: 0.9;
+  margin-bottom: 35px;
+}
+
+.saludo {
+  position: relative;
+}
+
+.tag-frontend {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #19496d;
+
+  display: inline-block;
+
+  opacity: 1;
+  animation: fadeLeftToRight 6s ease forwards;
+  animation-delay: 1.5s;
+  mask-image: linear-gradient(to right, black 85%, transparent);
+  mask-size: 0% 100%;
+  mask-repeat: no-repeat;
+}
+
+@keyframes fadeLeftToRight {
+  to {
+    opacity: 0;
+    mask-size: 200% 200%;
+  }
+}
+.minombre {
+  position: relative;
+}
+
+.tag-backend {
+  position: absolute;
+  top: 75px;
+  left: 335px;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #19496d;
+  display: inline block;
+  white-space: nowrap;
+  opacity: 1;
+  animation: fadeLeftToRight 6s ease forwards;
+  animation-delay: 3s;
+  mask-image: linear-gradient(to right, black 85%, transparent);
+  mask-size: 0% 100%;
+  mask-repeat: no-repeat;
+}
+.presentacion h2 {
+  text-align: left;
+  font-size: 3.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  line-height: 0.9;
+}
+
+.presentacion h3 {
+  text-align: left;
+  font-size: 5rem;
+  margin-top: 2rem;
+}
+
+.presentacion h1,
+.presentacion h2,
+.presentacion h3,
+.foto1 {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: entrada 0.7s ease forwards;
+}
+
+.presentacion h2 {
+  animation-delay: 0.2s;
+}
+.presentacion h3 {
+  animation-delay: 0.8s;
+}
+
+.foto1 {
+  animation-delay: 0.7;
+}
+
+@keyframes entrada {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contenedor-presentacion {
+  position: relative;
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 950px;
+  margin: auto;
+  margin-top: 30px;
+  align-items: flex-start;
+  padding-top: 4rem;
+}
+
+.presentacion {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.foto1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto1 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 3rem;
+}
+
+/*secciones*/
+
+.seccion {
+  display: flex;
+
+  min-height: 100vh;
+  padding: 40px 300px 80px 300px;
+  scroll-margin-top: 100px;
+  background-color: white;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.seccion h2 {
+  margin-top: 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+  position: relative;
+  font-family: "Oswald", sans-serif;
+}
+
+.seccion p {
+  color: white;
+  background-color: #19496d;
+  font-weight: 350;
+  line-height: 2.5rem;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: justify;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.foto_yo2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion img {
+  text-align: center;
+  border: 10px solid #19496d;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.universidad {
+  font-size: 1.7rem;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+
+  font-weight: 500;
+  margin: 0px 0;
+  color: #286e98;
+  letter-spacing: 0.5px;
+}
+
+#curriculum {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  min-height: 100vh;
+  scroll-margin-top: 120px;
+  padding-top: 0.5rem;
+}
+
+.seccion2 {
+  align-items: flex-start;
+  text-align: center;
+  margin-top: 40px;
+  border-bottom: 1.5px groove #19496d;
+}
+
+.seccion2 h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #19496d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.titulo-curriculum::before,
+.titulo-curriculum::after {
+  content: "";
+  flex: 2;
+  height: 2px;
+  background-color: #19496d;
+  opacity: 0.6;
+}
+
+.contenedor-cvs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.contenedor-cvs::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(25, 73, 109, 0.63);
+  transform: translateX(-50%);
+}
+
+.fila-cv,
+.fila-cv2 {
+  display: block;
+  width: 48%;
+  position: relative;
+  padding: 1.2rem 1.5rem;
+}
+
+.educa {
+  font-family: "Oswald", sans-serif;
+  color: #222;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.experiencia1 {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.puesto {
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 1.6rem;
+}
+
+.puesto::before {
+  content: "•";
+  position: absolute;
+  left: 0rem;
+  top: 50%;
+  font-size: 1.4rem;
+  color: #19496d;
+  transform: translateY(-50%);
+}
+
+.anio-exp {
+  margin-left: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #3a5c72;
+  text-align: left;
+}
+
+.descripcion-exp1 {
+  text-align: justify;
+  padding-left: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  padding-right: 1rem;
+}
+
+.descripcion-exp1::before {
+  font-family: "Oswald", sans-serif;
+  content: "-";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  transform: translateY(-20%);
+}
+
+.proyectos-word {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.titulo-proy {
+  position: relative;
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  padding-left: 1.4rem;
+  font-size: 1.3rem;
+}
+
+.titulo-proy::before {
+  content: "•";
+  font-family: "Oswald", sans-serif;
+  left: 0;
+  position: absolute;
+  font-size: 1.4rem;
+  color: #19496d;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.subtitulo-web {
+  text-align: left;
+  padding-left: 1.4rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #3a5c72;
+  font-weight: 500;
+}
+
+.descripcion_proy {
+  text-align: justify;
+  padding-left: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.descripcion_proy::before {
+  position: absolute;
+  content: "-";
+  left: 25px;
+  transform: translateY(-20%);
+}
+
+.detalles_curriculum {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid #19496d;
+  color: #222;
+  text-align: left;
+}
+
+.detalle-item {
+  margin-bottom: 1.2rem;
+  text-align: left;
+  padding-left: 0;
+}
+
+.detalle-label {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #19496d;
+}
+
+.detalle-valor {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #333;
+  margin-left: 0;
+}
+
+.tecnologias {
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  border-left: 4px solid #19496d;
+  padding-left: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.tecnologias_grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tec_icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.front-endword {
+  position: relative;
+  display: flex;
+  text-align: left;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+}
+
+.front-endword::before {
+  content: "•";
+  position: absolute;
+  left: 1rem;
+  color: #19496d;
+}
+
+.tec_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.tools_word {
+  display: flex;
+  position: relative;
+  text-align: left;
+  padding-left: 2rem;
+  font-size: 1.3rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.tools_word::before {
+  content: "•";
+  position: absolute;
+  left: 1rem;
+  color: #19496d;
+}
+
+.tecnologias2 {
+  display: flex;
+
+  justify-content: center;
+  gap: 3rem;
+}
+.tecnologias_grid2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tec_icon2 {
+  padding-top: 0.5rem;
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+}
+
+.tec_label2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#contacto {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  min-height: 100vh;
+  scroll-margin-top: 120px;
+  font-family: "Oswald", sans-serif;
+  padding-top: 0.5rem;
+}
+
+.titulo_contacto {
+  border-left: 4px solid #19496d;
+  margin-left: 1.5rem;
+  padding-left: 5px;
+}
+
+.campo {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.campo .icono {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #19496d;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: rgb(243, 239, 239);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #19496d;
+}
+
+.campo textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-contacto {
+  width: 60%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+form button {
+  width: 30%;
+  padding: 12px 20px;
+  background: #19496d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: #13354f;
+}
+
+.footer {
+  background: #19496d;
+  padding: 2.5rem 0;
+  margin-top: 4rem;
+  color: #e3e3e3;
+  font-family: "Oswald", sans-serif;
+}
+
+.footer-contenido {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.footer-redes {
+  margin-bottom: 1.5rem;
+}
+
+.footer-redes a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #8bb3c9;
+  font-size: 26px;
+  transition: color 0.3s ease;
+}
+
+.footer-redes a:hover {
+  color: #ffffff;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+
+.footer-redes .material-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.material-icons {
+  font-size: 1.3rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+/*RESPONSIVE*/
+@keyframes fadeInMobile {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#inicio,
+#sobre-mi,
+#curriculum,
+#contacto {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .fondo {
+    position: absolute;
+    inset: 0;
+    background-image: url("img/background1.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  #inicio {
+    margin-top: 0rem;
+  }
+
+  #curriculum {
+    margin-bottom: 0;
+    margin-top: 0rem;
+  }
+
+  .links-navega {
+    position: static;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .lang-padre {
+    position: absolute;
+    right: 0.1rem;
+    margin-top: 1.2rem;
+    margin-right: 0;
+  }
+
+  .lang-switch button {
+    border: none !important;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+  }
+
+  .navegacion {
+    position: fixed;
+    height: auto;
+    padding: 0.2rem 0;
+    border-radius: 0;
+  }
+
+  .navegacion a {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .contenedor-presentacion {
+    margin-top: 2rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .presentacion {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .presentacion h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: "Poppins", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .presentacion h2 {
+    font-size: 2rem;
+    font-family: "Poppins", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .presentacion h3 {
+    font-size: 3rem;
+    margin-top: 0rem;
+    font-family: "Poppins", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .tag-frontend,
+  .tag-backend {
+    position: static;
+    display: flex;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+    opacity: 0;
+    padding-left: 0;
+    top: auto;
+    mask-image: none;
+    mask-size: initial;
+    opacity: 0;
+    animation: fadeInMobile 1.2s ease forwards;
+  }
+
+  .tag-frontend {
+    animation-delay: 1s;
+  }
+
+  .tag-backend {
+    animation-delay: 1.6s;
+  }
+
+  .foto1 img {
+    width: 80%;
+    max-width: 380px;
+    border-radius: 50%;
+    margin-top: -2rem;
+  }
+
+  .foto1 {
+    justify-content: center;
+  }
+
+  .seccion {
+    display: flex;
+    padding-top: 0;
+    margin-top: 0rem;
+    align-items: center;
+    background-color: white;
+  }
+
+  .seccion img {
+    border: 10px solid #19496d;
+    border-radius: 50%;
+  }
+
+  .oculto {
+    padding: 0;
+    align-items: center;
+  }
+
+  .universidad {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .seccion p {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .contenedor-cvs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .fila-cv {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .detalles_curriculum {
+    margin-left: 0.5rem;
+  }
+  .detalle-item {
+    margin-left: 1rem;
+  }
+  .tecnologias {
+    margin-left: 0.5rem;
+  }
+  .tecnologias_grid,
+  .tecnologias2 {
+    display: inline-block;
+  }
+
+  .form-contacto {
+    width: 100%;
+    max-width: 420px;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .campo {
+    width: 85%;
+  }
+  .form-contacto button {
+    align-self: flex-start;
+    margin-top: 1rem;
+  }
+
+  .footer-redes .material-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .material-icons {
+    font-size: 1.3rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+/*idiomas DESKTOP*/
+.lang-switch {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: 1px solid #e4e9ed;
+  color: #dee6eb;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.lang-switch button:hover {
+  background: #19496d;
+  color: white;
+}
+
+.lang-padre {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer-redes {
+  margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+  .contenedor-presentacion {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tag-frontend,
+  .tag-backend {
+    position: static;
+    margin-top: 0.5rem;
+  }
+}

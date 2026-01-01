@@ -1,0 +1,167 @@
+const translations = {
+  es: {
+    saludo: "¡Hola!",
+    soy: "Soy",
+    nav_inicio: "Inicio",
+    nav_sobre: "Sobre mi",
+    nav_cv: "Curriculum",
+    nav_contacto: "Contacto",
+    sobre_mi: "Sobre mi",
+    contacto: "Contacto",
+    universidad:
+      "Licenciado en Ciencias de la Computación, egresado de la Benemérita Universidad Autónoma de Puebla",
+    descripcion_yo:
+      "Soy Ángel Aguilar, alguien curioso, comprometido y colaborador, con gran capacidad de adaptación y aprendizaje autodidacta. Me motiva explorar más allá de lo posible, el trabajo en equipo, enfrentar retos tecnológicos y nunca dejar de aprender y compartir el conocimiento.",
+    resume: "CURRICULUM",
+    detalles: "DETALLES",
+    full_name: "Nombre:",
+    age: "Edad:",
+    age_num: "37 años",
+    ubication: "Ubicación:",
+    ubication_1: "Puebla, México",
+    university_: "Universidad:",
+    education: "Escolaridad:",
+    degree: "Licenciatura en Ciencias de la Computación",
+
+    work_exp: "EXPERIENCIA LABORAL",
+    position: "Ex-líder Operativo y Técnico - Centro de Servicios Digitales",
+    description_work:
+      "Gestión integral de un centro de servicios digitales de alta demanda, garantizando operaciones continuas bajo alto volumen de usuarios.",
+    description_work2:
+      "Mantenimiento preventivo y correctivo de equipos, administración de red local y WiFi, instalación de software y soporte técnico directo.",
+    description_work3:
+      "También realicé atención al cliente en servicios digitales, trámites en línea, compras, inventarios, control administrativo, manejo de ingresos/egresos y capacitación de personal.",
+    description_work4:
+      "Atención a clientes nacionales y extranjeros, brindando soporte utilizando inglés funcional en situaciones prácticas.",
+    tools: "Herramientas",
+
+    title_project: "Proyectos",
+    portfolio_title: "Portafolio Web Personal - Front-End Developer",
+    subtitulo_proy:
+      "Proyecto personal enfocado en el desarrollo Front-End y buenas prácticas de diseño web.",
+    description_proy1:
+      "Implementé animaciones y efectos visuales mediante CSS y JavaScript.",
+    description_proy2:
+      "Implementé un sistema de internacionalización (ES / EN) usando JavaScript y localStorage",
+    description_proy3:
+      "Desarrollé una pagina web completamente responsive utilizando HTML5 y CSS3",
+    description_proy4: "Manipulé DOM y manejé eventos con JavasScript.",
+    description_proy5:
+      "Integré un formulario de contacto funcional mediante Formspree.",
+    description_proy6:
+      "Realicé pruebas de visualización y responsive en dispositivo reales utilizando Ngrok.",
+
+    form_name: "Nombre*",
+    form_email: "E-mail*",
+    form_asunto: "Asunto",
+    form_mensaje: "Mensaje*",
+    envia_mensaje: "Envíar mensaje",
+
+    rights_reserved: "· Todos los derechos reservados ·",
+
+    thankyou: "Gracias",
+    m_enviado: "¡Mensaje enviado!",
+    backsite: "Volver al sitio",
+  },
+
+  en: {
+    saludo: "Hello!",
+    soy: "I am",
+    nav_inicio: "Home",
+    nav_sobre: "About me",
+    nav_cv: "Resume",
+    nav_contacto: "Contact",
+    sobre_mi: "About me",
+    contacto: "Contact",
+    universidad:
+      "Bachelor’s Degree in Computer Science, graduate of the Benemérita Universidad Autónoma de Puebla",
+    descripcion_yo:
+      "I am Angel, a curious, committed, and collaborative person with a strong ability to adapt and a self-taught learning mindset. I am motivated by exploring beyond what is possible, teamwork, facing technological challenges, and never stopping learning in order to share knowledge.",
+    resume: "RESUME",
+    detalles: "DETAILS",
+    full_name: "Name:",
+    age: "Age:",
+    age_num: "37 years",
+    ubication: "Ubication:",
+    ubication_1: "Puebla, Mexico",
+    university_: "University:",
+    education: "Education:",
+    degree: "Bachelor’s Degree in Computer Science",
+    _technology: "TECHNOLOGIES",
+    work_exp: "WORK EXPERIENCE",
+    tools: "Tools",
+    position: "Ex-Operational and Technical Lead - Digital Services Center ",
+    description_work:
+      "Comprehensive management of a high-demand digital services center, ensuring continuous operations under high user volume.",
+    description_work2:
+      "Preventive and corrective maintenance of equipment, local and WiFi network administration, software installation, and direct technical support.",
+    description_work3:
+      "I provided customer support for digital services and online procedures, while managing purchasing, inventory, administrative control, cash flow (income/expenses), and staff training.",
+    description_work4:
+      "Provided bilingual customer support for national and foreign clients, utilizing practical English skills to resolve real-world inquiries.",
+
+    title_project: "Projects",
+    portfolio_title: "Portfolio Web Personal - Front-End Developer",
+    subtitulo_proy:
+      "Personal project focused on Front-End development and web design best practices.",
+    description_proy1:
+      "Implemented animations and visual effects with CSS and JavaScript.",
+    description_proy2:
+      "Built a bilingual (ES / EN) internationalization system using HTML5 Y CSS3.",
+    description_proy3:
+      "Developed afully responsive website using HTML5 an CSS3.",
+    description_proy4:
+      "Worked with DOM manipulation and event handling JavaScript.",
+    description_proy5: "Integrated a functional contact form using Formspree.",
+    description_proy6:
+      "Performed responsive testing on real devices using Ngrok.",
+
+    form_name: "Name*",
+    form_email: "E-mail*",
+    form_asunto: "Subject",
+    form_mensaje: "Message*",
+    envia_mensaje: "Submit",
+
+    rights_reserved: "· All rights reserved ·",
+
+    thankyou: "Thank you!",
+    m_enviado: "¡Message sent!",
+    backsite: "Back to site",
+  },
+};
+
+function setLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+}
+
+const savedLang = localStorage.getItem("lang") || "es";
+setLanguage(savedLang);
+
+const btnEs = document.getElementById("btn-es");
+const btnEn = document.getElementById("btn-en");
+
+if (btnEs) {
+  btnEs.addEventListener("click", () => {
+    localStorage.setItem("lang", "es");
+    setLanguage("es");
+  });
+}
+
+if (btnEn) {
+  btnEn.addEventListener("click", () => {
+    localStorage.setItem("lang", "en");
+    setLanguage("en");
+  });
+}
