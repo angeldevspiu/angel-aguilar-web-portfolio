@@ -24,7 +24,7 @@ const translations = {
     degree: "Licenciatura en Ciencias de la Computación",
 
     work_exp: "EXPERIENCIA LABORAL",
-    position: "Ex-líder Operativo y Técnico - Centro de Servicios Digitales",
+    position: "Líder Operativo y Técnico - Centro de Servicios Digitales",
     description_work:
       "Gestión integral de un centro de servicios digitales de alta demanda, garantizando operaciones continuas bajo alto volumen de usuarios.",
     description_work2:
@@ -37,8 +37,11 @@ const translations = {
 
     title_project: "Proyectos",
     portfolio_title: "Portafolio Web Personal - Front-End Developer",
+    portfolio_title2: "Filtrado de verbos irregulares para Profesora de Inglés",
     subtitulo_proy:
       "Proyecto personal enfocado en el desarrollo Front-End y buenas prácticas de diseño web.",
+    subtitulo_proy2:
+      "Pequeño proyecto de Filtrado de verbos sorted Dark-Mode/Light-Mode",
     description_proy1:
       "Implementé animaciones y efectos visuales mediante CSS y JavaScript.",
     description_proy2:
@@ -50,6 +53,15 @@ const translations = {
       "Integré un formulario de contacto funcional mediante Formspree.",
     description_proy6:
       "Realicé pruebas de visualización y responsive en dispositivo reales utilizando Ngrok.",
+    description_proy7:
+      "Desarrollé una aplicación web estática para el aprendizaje de verbos irregulares.",
+    description_proy8:
+      "Creé de modo claro / modo oscuro mediante manipulación del DOM y clases CSS.",
+    description_proy9:
+      "Diseñé la interfaz responsive (mobile-first) compatible con dispositivos móviles y desktop para el alumnado.",
+    description_proy10:
+      "Implementé filtrado dinámico de datos (verbos) según patrones gramaticales.",
+    description_proy11: "Página: ",
 
     form_name: "Nombre*",
     form_email: "E-mail*",
@@ -90,7 +102,7 @@ const translations = {
     _technology: "TECHNOLOGIES",
     work_exp: "WORK EXPERIENCE",
     tools: "Tools",
-    position: "Ex-Operational and Technical Lead - Digital Services Center ",
+    position: "Operational and Technical Lead - Digital Services Center ",
     description_work:
       "Comprehensive management of a high-demand digital services center, ensuring continuous operations under high user volume.",
     description_work2:
@@ -102,8 +114,11 @@ const translations = {
 
     title_project: "Projects",
     portfolio_title: "Portfolio Web Personal - Front-End Developer",
+    portfolio_title2: "Filtering of irregular verbs for English Teacher",
     subtitulo_proy:
       "Personal project focused on Front-End development and web design best practices.",
+    subtitulo_proy2:
+      "Small project of filtering verbs sorted Dark-Mode/Light-Mode",
     description_proy1:
       "Implemented animations and visual effects with CSS and JavaScript.",
     description_proy2:
@@ -115,6 +130,16 @@ const translations = {
     description_proy5: "Integrated a functional contact form using Formspree.",
     description_proy6:
       "Performed responsive testing on real devices using Ngrok.",
+
+    description_proy7:
+      "I developed a static web application for learning irregular verbs.",
+    description_proy8:
+      "I created light mode / dark mode by manipulating the DOM and CSS classes.",
+    description_proy9:
+      "I designed the responsive (mobile-first) interface compatible with mobile and desktop devices for the students.",
+    description_proy10:
+      "I implemented dynamic filtering of data (verbs) according to grammatical patterns.",
+    description_proy11: "Website:",
 
     form_name: "Name*",
     form_email: "E-mail*",
@@ -165,3 +190,13 @@ if (btnEn) {
     setLanguage("en");
   });
 }
+
+document
+  .querySelector('a[href="#curriculum"]')
+  .addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector("#curriculum").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });

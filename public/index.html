@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <link rel="icon" type="image/png" href="img/favicon_img.png">
-    
+    <link rel="icon" type="image/png" href="img/favicon_img.png" />
+
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -45,7 +45,7 @@
       <div class="contenedor-presentacion oculto">
         <div class="presentacion">
           <h1 class="saludo" data-i18n="saludo">¡Hola!</h1>
-          
+
           <span class="tag-frontend">&lt;Front-End/&gt;</span>
 
           <h2 class="soy" data-i18n="soy">Soy</h2>
@@ -73,10 +73,10 @@
       </div>
 
       <p class="oculto" data-i18n="descripcion_yo">
-        Soy Ángel Aguilar, alguien curioso, comprometido y colaborador, 
-        con gran capacidad de adaptación y aprendizaje autodidacta. 
-        Me motiva explorar más allá de lo posible, el trabajo en equipo, enfrentar retos tecnológicos 
-        y nunca dejar de aprender para compartir el conocimiento.
+        Soy Ángel Aguilar, alguien curioso, comprometido y colaborador, con gran
+        capacidad de adaptación y aprendizaje autodidacta. Me motiva explorar
+        más allá de lo posible, el trabajo en equipo, enfrentar retos
+        tecnológicos y nunca dejar de aprender para compartir el conocimiento.
       </p>
     </section>
     <section id="curriculum" class="seccion2 oculto">
@@ -149,11 +149,9 @@
               />
             </div>
             <div class="tecnologias_grid2">
-              
               <img src="img/ngrok_img.png" alt="NGROK" class="tec_icon2" />
             </div>
             <div class="tecnologias_grid2">
-              
               <img src="img/forms_pree.png" alt="FORMSPREE" class="tec_icon2" />
             </div>
 
@@ -167,7 +165,7 @@
           <div class="educa" data-i18n="work_exp">EXPERIENCIA LABORAL</div>
           <div class="experiencia1">
             <h3 class="puesto" data-i18n="position">
-              Ex-líder Operativo y Técnico - Centro de Servicios Digitales
+              Líder Operativo y Técnico - Centro de Servicios Digitales
             </h3>
             <div class="anio-exp">2015 - 2025</div>
             <p class="descripcion-exp1" data-i18n="description_work">
@@ -222,7 +220,33 @@
               Realicé pruebas de visualización y responsive en dispositivos
               reales utilizando Ngrok.
             </p>
-            
+            <h3 class="titulo-proy2" data-i18n="portfolio_title2">
+              Filtrado de verbos irregulares para Profesora de Inglés
+            </h3>
+            <div class="subtitulo-web2" data-i18n="subtitulo_proy2">
+              Pequeño proyecto de Filtrado de verbos sorted Dark-Mode/Light-Mode
+            </div>
+            <p class="descripcion_proy" data-i18n="description_proy7">
+              Desarrollé una aplicación web estática para el aprendizaje de
+              verbos irregulares.
+            </p>
+            <p class="descripcion_proy" data-i18n="description_proy8">
+              Creé de modo claro / modo oscuro mediante manipulación del DOM y
+              clases CSS.
+            </p>
+            <p class="descripcion_proy" data-i18n="description_proy9">
+              Diseñé la interfaz responsive (mobile-first) compatible con
+              dispositivos móviles y desktop para el alumnado.
+            </p>
+            <p class="descripcion_proy" data-i18n="description_proy10">
+              Implementé filtrado dinámico de datos (verbos) según patrones
+              gramaticales.
+            </p>
+            <p class="descripcion_proy">
+              <span data-i18n="description_proy11"></span>
+              <a href="https://teacher-dulce-lopez.web.app/" target="_blank">
+                https://teacher-dulce-lopez.web.app/
+              </a>
             </p>
           </div>
         </div>
@@ -318,7 +342,10 @@
             <i class="fab fa-github"></i>
           </a>
 
-          <a href="https://www.linkedin.com/in/ang-aguilar/" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/ang-aguilar/"
+            aria-label="LinkedIn"
+          >
             <i class="fab fa-linkedin"></i>
           </a>
 
@@ -328,7 +355,9 @@
         </div>
 
         <p class="footer-copy">© 2026 Ángel Aguilar</p>
-        <p class="footer-copy2" data-i18n="rights_reserved"> ·Todos los derechos reservados·</p>
+        <p class="footer-copy2" data-i18n="rights_reserved">
+          ·Todos los derechos reservados·
+        </p>
       </div>
     </footer>
 
@@ -338,20 +367,13 @@
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add("visible");
-            } else {
-              
-              if (
-                entry.boundingClientRect.top > window.innerHeight ||
-                entry.boundingClientRect.bottom < 0
-              ) {
-                entry.target.classList.remove("visible");
-              }
+              observer.unobserve(entry.target); //
             }
           });
         },
         {
-          threshold: 0.25,
-        }
+          threshold: 0.1,
+        },
       );
 
       document

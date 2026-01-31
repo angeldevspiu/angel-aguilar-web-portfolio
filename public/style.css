@@ -434,7 +434,8 @@ body {
   margin-bottom: 1rem;
 }
 
-.titulo-proy {
+.titulo-proy,
+.titulo-proy2 {
   position: relative;
   text-align: left;
   font-family: "Oswald", sans-serif;
@@ -443,7 +444,8 @@ body {
   font-size: 1.3rem;
 }
 
-.titulo-proy::before {
+.titulo-proy::before,
+.titulo-proy2::before {
   content: "•";
   font-family: "Oswald", sans-serif;
   left: 0;
@@ -454,7 +456,8 @@ body {
   top: 50%;
 }
 
-.subtitulo-web {
+.subtitulo-web,
+.subtitulo-web2 {
   text-align: left;
   padding-left: 1.4rem;
   font-family: "Oswald", sans-serif;
@@ -464,7 +467,8 @@ body {
   font-weight: 500;
 }
 
-.descripcion_proy {
+.descripcion_proy,
+.descripcion_proy2 {
   text-align: justify;
   padding-left: 1.5rem;
   font-family: "Oswald", sans-serif;
@@ -768,6 +772,12 @@ form button:hover {
     background-size: cover;
     background-position: center;
     z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    #curriculum {
+      min-height: 100vh;
+    }
   }
 
   #inicio {
