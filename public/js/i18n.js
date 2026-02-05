@@ -28,7 +28,9 @@ const translations = {
     description_work:
       "Gestión integral de un centro de servicios digitales de alta demanda, garantizando operaciones continuas bajo alto volumen de usuarios.",
     description_work2:
-      "Mantenimiento preventivo y correctivo de equipos, administración de red local y WiFi, instalación de software y soporte técnico directo.",
+      " Brindé mantenimiento preventivo y correctivo de equipos,administración de red local, puenteo o Hotspot WiFi para clientes, instalación de software y soporte técnico directo.",
+    description_work2_5:
+      "Resolví incidencias de conexiones de red de los equipos,conflictos de IP estáticos/dinámicos y filtrado MAC para la gestión de dispositivos.",
     description_work3:
       "También realicé atención al cliente en servicios digitales, trámites en línea, compras, inventarios, control administrativo, manejo de ingresos/egresos y capacitación de personal.",
     description_work4:
@@ -105,6 +107,8 @@ const translations = {
     position: "Operational and Technical Lead - Digital Services Center ",
     description_work:
       "Comprehensive management of a high-demand digital services center, ensuring continuous operations under high user volume.",
+    description_work2_5:
+      "Resolved network connection issues on devices, fixed static and dynamic IP conflicts, and managed devices using MAC filtering.",
     description_work2:
       "Preventive and corrective maintenance of equipment, local and WiFi network administration, software installation, and direct technical support.",
     description_work3:
