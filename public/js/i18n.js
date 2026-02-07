@@ -25,6 +25,7 @@ const translations = {
 
     work_exp: "EXPERIENCIA LABORAL",
     position: "Líder Operativo y Técnico - Centro de Servicios Digitales",
+    timeWork: "Enero 2015 - Febrero 2026",
     description_work:
       "Gestión integral de un centro de servicios digitales de alta demanda, garantizando operaciones continuas bajo alto volumen de usuarios.",
     description_work2:
@@ -63,7 +64,8 @@ const translations = {
       "Diseñé la interfaz responsive (mobile-first) compatible con dispositivos móviles y desktop para el alumnado.",
     description_proy10:
       "Implementé filtrado dinámico de datos (verbos) según patrones gramaticales.",
-    description_proy11: "Página: ",
+    description_proy11: "Página:  ",
+    bd: "Base de datos",
 
     form_name: "Nombre*",
     form_email: "E-mail*",
@@ -105,6 +107,7 @@ const translations = {
     work_exp: "WORK EXPERIENCE",
     tools: "Tools",
     position: "Operational and Technical Lead - Digital Services Center ",
+    timeWork: "January 2015 - February 2026",
     description_work:
       "Comprehensive management of a high-demand digital services center, ensuring continuous operations under high user volume.",
     description_work2_5:
@@ -144,6 +147,7 @@ const translations = {
     description_proy10:
       "I implemented dynamic filtering of data (verbs) according to grammatical patterns.",
     description_proy11: "Website:",
+    bd: "Data Base",
 
     form_name: "Name*",
     form_email: "E-mail*",
