@@ -27,18 +27,18 @@ const translations = {
     position: "Líder Operativo y Técnico - Centro de Servicios Digitales",
     timeWork: "Enero 2015 - Febrero 2026",
     description_work:
-      "Gestión integral de un centro de servicios digitales de alta demanda, garantizando operaciones continuas bajo alto volumen de usuarios.",
+      "Hice gestionamiento y atención en servicios digitales de alta demanda, garantizando operaciones continuas bajo alto volumen de usuarios.",
     description_work2:
-      " Brindé mantenimiento preventivo y correctivo de equipos,administración de red local, puenteo o Hotspot WiFi para clientes, instalación de software y soporte técnico directo.",
+      " Brindé mantenimiento preventivo y correctivo de equipos, administración de red local, puenteo o Hotspot WiFi para clientes, instalación de software y soporte técnico directo.",
     description_work2_5:
-      "Resolví incidencias de conexiones de red de los equipos,conflictos de IP estáticos/dinámicos y filtrado MAC para la gestión de dispositivos.",
+      "Resolví incidencias de conexiones de red de los equipos, conflictos de IP estáticos/dinámicos y filtrado MAC para la gestión de dispositivos.",
     description_work3:
       "También realicé atención al cliente en servicios digitales, trámites en línea, compras, inventarios, control administrativo, manejo de ingresos/egresos y capacitación de personal.",
     description_work4:
-      "Atención a clientes nacionales y extranjeros, brindando soporte utilizando inglés funcional en situaciones prácticas.",
+      "Realicé atención a clientes nacionales y extranjeros, brindando soporte utilizando inglés funcional en situaciones prácticas.",
     tools: "Herramientas",
 
-    title_project: "Proyectos",
+    title_project: "Proyectos Independientes",
     portfolio_title: "Portafolio Web Personal - Front-End Developer",
     portfolio_title2: "Filtrado de verbos irregulares para Profesora de Inglés",
     subtitulo_proy:
@@ -109,17 +109,17 @@ const translations = {
     position: "Operational and Technical Lead - Digital Services Center ",
     timeWork: "January 2015 - February 2026",
     description_work:
-      "Comprehensive management of a high-demand digital services center, ensuring continuous operations under high user volume.",
+      "Managed of a high-demand digital services center, ensuring continuous operations under high user volume.",
     description_work2_5:
       "Resolved network connection issues on devices, fixed static and dynamic IP conflicts, and managed devices using MAC filtering.",
     description_work2:
       "Preventive and corrective maintenance of equipment, local and WiFi network administration, software installation, and direct technical support.",
     description_work3:
-      "I provided customer support for digital services and online procedures, while managing purchasing, inventory, administrative control, cash flow (income/expenses), and staff training.",
+      "Provided customer support for digital services and online procedures, while managing purchasing, inventory, administrative control, cash flow (income/expenses), and staff training.",
     description_work4:
       "Provided bilingual customer support for national and foreign clients, utilizing practical English skills to resolve real-world inquiries.",
 
-    title_project: "Projects",
+    title_project: "Independent Projects",
     portfolio_title: "Portfolio Web Personal - Front-End Developer",
     portfolio_title2: "Filtering of irregular verbs for English Teacher",
     subtitulo_proy:
